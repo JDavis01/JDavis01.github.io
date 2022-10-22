@@ -1,0 +1,44 @@
+.grid-container {
+    margin: 3rem auto;
+    width: min(100%, 75rem);
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2em;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+#navigation li {
+    margin-right: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+@media (min-width: 55em) {
+    .grid-container {
+        grid-template-columns: 2fr 2fr;
+    }
+    header {
+        grid-column: span 2;
+    }
+    nav {
+        grid-column: span 2;
+    }
+    footer {
+        grid-column: span 2;
+    }
+}
